@@ -73,6 +73,13 @@
             blk.style.boxShadow = '2px 2px 2px #000'
             var bd = document.getElementsByTagName('body')[0]
             bd.style.backgroundColor = '#aaa'
+        }else if(sl.value=='mac'){
+            window.open('res/langenius-mac.zip')
+            var blk = document.getElementById('tag_mac')
+            blk.style.backgroundColor = '#fff'
+            blk.style.boxShadow = '2px 2px 2px #000'
+            var bd = document.getElementsByTagName('body')[0]
+            bd.style.backgroundColor = '#aaa'
         }
         location.href = '#tag_' + sl.value
     }
@@ -114,7 +121,7 @@
 	</h1>
         <a href="donate.html">捐赠</a>
         <h4 style="color: #444">局域网传文件利器 !</h4>
-        <h4 style="color: green;margin: 0px;padding: 0px;">版本消息: v5.0.2 Android发布!</h4>
+        <h4 style="color: green;margin: 0px;padding: 0px;">版本消息: Mac版本发布!</h4>
         <div style="align-items: center;display: flex;flex-direction: column;">
             <img src="res/share.jpg" style="max-width: 200px;box-shadow: 2px 2px 2px #aaa">
             <br>
@@ -125,6 +132,7 @@
                     <option value="windows">Windows</option>
                     <option value="linux">Linux</option>
                     <option value="android">安卓</option>
+                    <option value="mac">Mac</option>
                 </select>
             </div>
         </div>
@@ -160,6 +168,15 @@
         <div id="tag_android">
             <h1>安卓: 安装步骤</h1>
             <h4 class="nobr">1.点击 .apk 文件即可安装</h4>
+        </div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <div id="tag_mac">
+            <h1>Mac:安装之后</h1>
+            <h4 class="nobr">解压之后，运行langenius即可</h4>
         </div>
         <p></p>
         <p></p>
