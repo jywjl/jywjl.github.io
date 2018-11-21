@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>局域网精灵-线上版</title>
     <script type="text/javascript">
-        function submit(){
-            var username=document.getElementById('username').value
+        function submit() {
+            var username = document.getElementById('username').value
             console.log(username)
-            location.href='http://120.77.202.220/'+username
+            location.href = 'http://120.77.202.220/' + username
         }
+
     </script>
 </head>
+
 <body>
     <h1>局域网精灵-线上版</h1>
     <h3>输入用户名，查看Ta的分享主页</h3>
     <input type="text" name="username" id="username"><input type="button" name="search" id="search" value="前往" onclick="submit()">
+    <script>
+        var input = document.getElementById('username')
+        input.addEventListener("keyup", function (event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                var username = input.value
+                console.log(username)
+                location.href = 'http://120.77.202.220/' + username
+            }
+        });
+    </script>
 </body>
+
 </html>
