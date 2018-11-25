@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>充值 - 局域网精灵</title>
+    <style>
+        #ctn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ctn">
+        <h1 style="display: inline;">请务必备注上你的用户名:<span style="color: red" id="username"></span></h1>
+        <img src="images/alipay.jpg" alt="alipay">
+        <img src="images/wechat.jpg" alt="wechat">
+    </div>
+    <script>
+        var username=location.href.split('u=')
+        if (username.length>1){
+        	document.getElementById("username").innerHTML=username[1]
+        }
+    </script>
+</body>
+
+</html>
