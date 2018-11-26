@@ -17,8 +17,6 @@
             if (xhr.readyState == 4 && xhr.status == 200) {
                 console.log(xhr.responseText);
                 window.server=xhr.responseText
-            }else {
-                alert('获取服务器地址失败:'+xhr.statusText);
             }
         }
         xhr.open("GET", "https://jywjl.github.io/apis/server", true)
