@@ -10,9 +10,19 @@
         function submit() {
             var username = document.getElementById('username').value
             console.log(username)
-            location.href = 'http://120.77.202.220/' + username
+            location.href = 'http://'+window.server+'/' + username
         }
-
+        var xhr=new XMLHttpRequest()
+        xhr.onreadystatechange=function(){
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                console.log(xhr.responseText);
+                window.server=xhr.responseText
+            }else {
+                alert('获取服务器地址失败:'+xhr.statusText);
+            }
+        }
+        xhr.open("GET", "https://jywjl.github.io/apis/server", true)
+        xhr.send(null)
     </script>
 </head>
 
