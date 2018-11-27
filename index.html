@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>局域网精灵-线上版</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript">
         function submit() {
             var username = document.getElementById('username').value
@@ -24,10 +27,10 @@
     </script>
 </head>
 
-<body>
+<body style="padding: 10px;">
     <h1>局域网精灵-线上版</h1>
-    <h3>输入用户名，查看Ta的分享主页</h3>
-    <input type="text" name="username" id="username"><input type="button" name="search" id="search" value="前往" onclick="submit()">
+    <input type="text" name="username" id="username" placeholder="输入用户名，查看Ta的分享主页">
+    <a class="waves-effect waves-light btn" onclick="submit()"><i class="material-icons left">search</i>前往</a>
     <script>
         var input = document.getElementById('username')
         input.addEventListener("keyup", function (event) {
@@ -35,7 +38,7 @@
             if (event.keyCode === 13) {
                 var username = input.value
                 console.log(username)
-                location.href = 'http://120.77.202.220/' + username
+                location.href = 'http://'+window.server + username
             }
         });
     </script>
