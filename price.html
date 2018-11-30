@@ -25,7 +25,12 @@
     </style>
     <script>
         function gopay() {
-            document.getElementById('topup1').click()
+            var username = location.href.split('?u=')
+            var str = ''
+            if (username.length>1){
+                str=username[1]
+            }
+            location.href='https://jywjl.github.io/topup.html?u='+str
         }
     </script>
 </head>
@@ -33,7 +38,7 @@
 <body>
     <nav class="nav-extended cyan" style="display: flex;flex-direction: column;align-items: center">
         <div class="nav-wrapper wordTab" style="width: 100%;display: flex;flex-direction: column;align-items: center">
-            <a href="https://jywjl.github.io" class="brand-logo"> 
+            <a href="https://jywjl.github.io" class="brand-logo">
                 <i class="material-icons">home</i> 局域网精灵</a>
         </div>
         <div class="nav-content">
@@ -67,12 +72,6 @@
     </div>
     <script>
         M.AutoInit()
-        var username = location.href.split('?u=')
-        console.log(username)
-        if (username.length > 1) {
-            document.getElementById('topup1').href = 'topup.html?u=' + username[1]
-            document.getElementById('topup2').href = 'topup.html?u=' + username[1]
-        }
     </script>
 </body>
 
