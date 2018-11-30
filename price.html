@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>价格 - 局域网精灵</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .price{
+            color: red
+        }
+    </style>
+    <script>
+        function gopay(){
+            document.getElementById('topup1').click()
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="nav-extended">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo row">会员价格</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">链接</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html">官网</a></li>
+                <li><a href="topup.html" id="topup1">支付页面</a></li>
+            </ul>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a href="#test1">会员</a></li>
+                <li class="tab"><a href="#test2">永久会员</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">官网</a></li>
+        <li><a href="topup.html" id="topup2">支付页面</a></li>
+    </ul>
+
+    <div id="test1" class="col s12">
+        <h1 class="price">惊喜46折!</h1>
+        <h3> <small>12月感恩回馈价：</small> <span class="price">1元/15天 </span><small><s class="price"> 原价1元/7天</s></small></h3>
+        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="gopay()">去支付
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+    <div id="test2" class="col s12">
+        <h1 class="price">惊喜46折!</h1>
+        <h3> <small>12月感恩回馈价：</small> <span class="price">46元(永久) </span><small><s class="price"> 原价101元(永久)</s></small></h3>
+        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="gopay()">去支付
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+    <script>
+        M.AutoInit()
+        var username = location.href.split('?u=')
+        console.log(username)
+        if (username.length > 1) {
+            document.getElementById('topup1').href = 'topup.html?u=' + username[1]
+            document.getElementById('topup2').href = 'topup.html?u=' + username[1]
+        }
+    </script>
+</body>
+
+</html>
