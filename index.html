@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+        .wordLeft{
+            margin-left: 10px;
+        }
+    </style>
     <script type="text/javascript">
         function submit() {
             var username = document.getElementById('username').value
@@ -29,36 +34,32 @@
 </head>
 
 <body>
-    <nav class="nav-extended">
+    <nav class="nav-extended cyan">
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Logo</a>
+            <a href="#" class="brand-logo wordLeft"><small>局域网精灵-线上版</small></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">JavaScript</a></li>
+                <li><a href="price.html">购买VIP</a></li>
+                <li><a href="download.html">下载</a></li>
+                <li><a href="contact.html">联系作者</a></li>
             </ul>
         </div>
         <div class="nav-content">
-            <ul class="tabs tabs-transparent">
-                <li class="tab"><a href="#test1">Test 1</a></li>
-                <li class="tab"><a class="active" href="#test2">Test 2</a></li>
-                <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
-                <li class="tab"><a href="#test4">Test 4</a></li>
-            </ul>
         </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+        <li><a href="price.html">购买VIP</a></li>
+        <li><a href="download.html">下载</a></li>
+        <li><a href="contact.html">联系作者</a></li>
     </ul>
-
-    <div id="test1" class="col s12">Test 1</div>
-    <div id="test2" class="col s12">Test 2</div>
-    <div id="test3" class="col s12">Test 3</div>
-    <div id="test4" class="col s12">Test 4</div>
+    <div style="display: flex;flex-direction: column;align-items: center;min-height: 900px;background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543577132859&di=7dc356a2be042e91b6a236989f4b7fb2&imgtype=0&src=http%3A%2F%2Fatt.bbs.duowan.com%2Fforum%2F201307%2F20%2F193524yre5zwigy8ewj2kj.jpg)">
+        <img src="icons/logo_white.svg" alt="logo" width="100" height="100" style="margin-top: 200px;margin-bottom: 70px;">
+        <div style="max-width: 500px;width: 100%;display: flex;flex-direction: row;align-items: center;padding: 10px;">
+            <input type="text" name="username" id="username" class="input-field" placeholder="输入用户名,进入Ta的分享主页">
+            <i class="material-icons right" onclick="submit()">send</i>
+        </div>
+    </div>
     <script>
         M.AutoInit()
         var input = document.getElementById('username')
