@@ -16,10 +16,38 @@
         }
     </style>
     <script type="text/javascript">
+        function check_os() {
+            if (navigator.userAgent.indexOf("Windows") != -1) {
+                return "windows"
+            }
+            if (navigator.userAgent.indexOf("Android") != -1) {
+                return "android"
+            }
+            if (navigator.userAgent.indexOf('Macintosh') != -1) {
+                return "mac"
+            }
+            return "linux"
+        }
         function submit() {
             var username = document.getElementById('username').value
             console.log(username)
             location.href = 'http://' + window.server + '/' + username
+        }
+        function download() {
+            switch (check_os()) {
+                case 'windows':
+                    location.href = 'https://jywjl.github.io/binaries/windows_x86_lastest.exe'
+                    break;
+                case 'mac':
+                    location.href = 'https://jywjl.github.io/binaries/mac_x86_64_lastest.zip'
+                    break;
+                case 'linux':
+                    location.href = 'https://jywjl.github.io/binaries/linux_x86_64_lastest.tar.bz2'
+                    break;
+                case 'android':
+                    location.href = 'https://jywjl.github.io/binaries/android_lastest.apk'
+                    break;
+            }
         }
         var xhr = new XMLHttpRequest()
         xhr.onreadystatechange = function () {
@@ -36,7 +64,7 @@
 <body>
     <nav class="nav-extended cyan">
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo wordLeft"><small>局域网精灵-线上版</small></a>
+            <a href="#" class="brand-logo wordLeft" style="font-size: 20px;">局域网精灵</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="price.html">购买VIP</a></li>
@@ -54,10 +82,27 @@
         <li><a href="contact.html">联系作者</a></li>
     </ul>
     <div style="display: flex;flex-direction: column;align-items: center;min-height: 900px;background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543577132859&di=7dc356a2be042e91b6a236989f4b7fb2&imgtype=0&src=http%3A%2F%2Fatt.bbs.duowan.com%2Fforum%2F201307%2F20%2F193524yre5zwigy8ewj2kj.jpg)">
-        <img src="icons/logo_white.svg" alt="logo" width="100" height="100" style="margin-top: 200px;margin-bottom: 70px;">
-        <div style="max-width: 500px;width: 100%;display: flex;flex-direction: row;align-items: center;padding: 10px;">
+        <img src="icons/logo_white.svg" alt="logo" width="100" height="100" style="margin-top: 160px;margin-bottom: 30px">
+        <span style="color: white">局域网精灵 - 线上版</span>
+        <div style="max-width: 500px;width: 100%;display: flex;flex-direction: row;align-items: center;padding: 10px;margin-top: 40px">
             <input type="text" name="username" id="username" class="input-field" placeholder="输入用户名,进入Ta的分享主页">
             <i class="material-icons right" onclick="submit()">send</i>
+        </div>
+        <div style="margin-top: 50px;">
+            <button class="btn waves-effect waves-light" type="button" name="download" id="download" onclick="download()">下载
+                <i class="material-icons right">cloud_download</i>
+            </button>
+
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'><i class="material-icons">keyboard_arrow_down</i></a>
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="https://jywjl.github.io/binaries/android_lastest.apk">安卓</a></li>
+                <li class="divider" tabindex="-1"></li>
+                <li><a href="https://jywjl.github.io/binaries/windows_x86_lastest.exe">Windows</a></li>
+                <li><a href="https://jywjl.github.io/binaries/mac_x86_64_lastest.zip">Mac OS</a></li>
+                <li><a href="https://jywjl.github.io/binaries/linux_x86_64_lastest.tar.bz2">Linux 64位</a></li>
+                <li><a href="https://jywjl.github.io/binaries/linux_x86_lastest.tar.bz2">Linux 32位</a></li>
+            </ul>
         </div>
     </div>
     <script>
