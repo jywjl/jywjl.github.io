@@ -62,14 +62,16 @@
     <script>
         M.AutoInit()
         var input = document.getElementById('username')
-        input.addEventListener("keyup", function (event) {
-            event.preventDefault();
-            if (event.keyCode === 13) {
-                var username = input.value
-                console.log(username)
-                location.href = 'http://' + window.server + '/' + username
-            }
-        });
+        if (input) {
+            input.addEventListener("keyup", function (event) {
+                event.preventDefault();
+                if (event.keyCode === 13) {
+                    var username = input.value
+                    console.log(username)
+                    location.href = 'http://' + window.server + '/' + username
+                }
+            });
+        }
     </script>
 </body>
 
