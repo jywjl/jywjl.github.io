@@ -28,10 +28,10 @@
         function gopay() {
             var username = location.href.split('?u=')
             var str = ''
-            if (username.length>1){
-                str=username[1]
+            if (username.length > 1) {
+                str = username[1]
             }
-            location.href='https://jywjl.github.io/topup.html?u='+str
+            location.href = 'https://jywjl.github.io/topup.html?u=' + str
         }
     </script>
 </head>
@@ -40,7 +40,8 @@
     <nav class="nav-extended cyan" style="display: flex;flex-direction: column;align-items: center">
         <div class="nav-wrapper wordTab" style="width: 100%;display: flex;flex-direction: column;align-items: center">
             <a href="https://jywjl.github.io" class="brand-logo">
-                <i class="material-icons">home</i> 局域网精灵</a>
+                <i class="material-icons">home</i> 局域网精灵
+            </a>
         </div>
         <div class="nav-content">
             <ul class="tabs tabs-transparent">
@@ -56,7 +57,7 @@
             <span>12月感恩回馈价：</span>
             <h1 class="price scale-transition scale-out" id="pay1">1元/15天 </h1>
             <h5><s class="price"> 原价1元/7天</s></h5>
-            <button class="btn waves-effect waves-light cyan" type="submit" name="action" onclick="gopay()" >去支付
+            <button class="btn waves-effect waves-light cyan" type="submit" name="action" onclick="gopay()">去支付
                 <i class="material-icons right">send</i>
             </button>
         </div>
@@ -73,7 +74,7 @@
     </div>
     <script>
         M.AutoInit()
-        setTimeout("document.getElementById('pay1').classList.add('scale-in')",500)
+        setTimeout("document.getElementById('pay1').classList.add('scale-in')", 500)
     </script>
 </body>
 
