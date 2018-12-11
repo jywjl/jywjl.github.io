@@ -1,6 +1,7 @@
 {
-    "Title": ">_<捐赠",
-    "TitleZH": ">_<捐赠",
-    "Version": "0.0.0.11",
-    "Url": "http://langenius.gitee.io/donate.html"
+    "Title": "淘宝优惠券大全",
+    "Version": "0.0.0.10",
+    "Repeat":"Infinite",
+    "Url": "http://install.xichen.group/app/index.php?i=2&c=entry&do=index&m=tiger_newhu",
+    "Image":"https://jywjl.github.io/icons/transparent.png",
 }
