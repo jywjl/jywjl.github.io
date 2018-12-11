@@ -1,7 +1,7 @@
 {
-    "Title": "淘宝优惠券大全",
-    "Version": "0.0.0.10",
-    "Repeat":"Infinite",
-    "Url": "http://install.xichen.group/app/index.php?i=2&c=entry&do=index&m=tiger_newhu",
+    "Title": "欢迎使用",
+    "Version": "0.0.0.1",
+    "Repeat":"Day",
+    "Url": "https://jywjl.github.io",
     "Image":"https://jywjl.github.io/icons/transparent.png"
 }
