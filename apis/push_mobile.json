@@ -1,6 +1,6 @@
 {
     "Title": "欢迎使用，您可通过官网升级",
-    "Version": "0.0.0.1",
+    "Version": "0.0.1",
     "Repeat":"Once",
     "Url": "https://jywjl.github.io",
     "Image":"https://jywjl.github.io/icons/transparent.png"
