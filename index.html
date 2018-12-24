@@ -87,16 +87,14 @@
         <div style="max-width: 500px;width: 100%;display: flex;flex-direction: row;align-items: center;padding: 10px;margin-top: 40px">
             <div class="input-field inline" style="flex-grow: 1">
                 <input id="username" type="text" style="color:#fff">
-                <label for="username">输入用户名，进入Ta的分享主页</label>
+                <label for="username">输入用户名，进入分享主页</label>
             </div>
-            <i class="material-icons right tooltipped" data-position="bottom" data-tooltip="进入" onclick="submit()" style="color:#2bbbad">send</i>
+            <i data-position="bottom" data-tooltip="进入" onclick="submit()" style="color:#2bbbad">进入</i>
         </div>
         <div style="margin-top: 100px;">
             <button class="btn waves-effect waves-light" type="button" name="download" id="download" onclick="download()">下载客户端
-                <i class="material-icons right">cloud_download</i>
             </button>
-
-            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>下载</a>
+            <a class='dropdown-trigger btn-flat' style="color: white" href='#' data-target='dropdown1'>其他版本</a>
             <!-- Dropdown Structure -->
             <ul id='dropdown1' class='dropdown-content'>
                 <li><a href="https://jywjl.github.io/binaries/android_lastest.apk">安卓</a></li>
