@@ -14,14 +14,12 @@
         .price{
             color: red
         }
-        .wordTab{
-            padding-left: 10px;
+        #pay1,#pay2{
+            font-size: 30px;
         }
-        .wrap{
-            display:flex;flex-direction: column;align-items: center;
-        }
-        h1,h3,h5{
-            display: inline;
+        .mcard{
+            padding: 20px;display: flex;flex-direction: column;align-items:flex-start;
+            margin: 5px;
         }
     </style>
     <script>
@@ -46,38 +44,21 @@
 </head>
 
 <body>
-    <nav class="nav-extended cyan" style="display: flex;flex-direction: column;align-items: center">
-        <div class="nav-wrapper wordTab" style="width: 100%;display: flex;flex-direction: column;align-items: center">
-            <a href="https://jywjl.github.io" class="brand-logo">
-                局域网精灵
-            </a>
-        </div>
-        <div class="nav-content">
-            <ul class="tabs tabs-transparent">
-                <li class="tab"><a href="#test1">会员</a></li>
-                <li class="tab"><a href="#test2">永久会员</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div id="test1" class="col s12 wordTab">
-        <div class="wrap">
-            <h3 class="price">惊喜46折!</h3>
-            <span>12月感恩回馈价：</span>
-            <h1 class="price scale-transition scale-out" id="pay1">1元/15天 </h1>
-            <h5><s class="price"> 原价1元/7天</s></h5>
+    <div style="display: flex;flex-direction: column;align-items: center;">
+        <div style="margin-top: 20px;display: flex;flex-direction: column;align-items: center;max-width: 700px;width: 100%;">
+            <b>折扣截止2019年1月15号</b>
+            <div style="display: flex;flex-direction: row;align-items: center;padding: 10px;">
+                <div class="card mcard">
+                    <span id="pay1" class="price">1元15天</span>
+                    <s >原价：1元7天</s>
+                </div>
+                <div class="card mcard">
+                    <span id="pay2" class="price">46元永久</span>
+                    <s>原价：101元永久</s>
+                </div>
+            </div>
             <button class="btn waves-effect waves-light cyan" type="submit" name="action" onclick="gopay()">去支付
-                <i class="fa fa-paper-plane" aria-hidden="true"></i>
-            </button>
-        </div>
-
-    </div>
-    <div id="test2" class="col s12 wordTab">
-        <div class="wrap">
-            <h1 class="price">46元(永久) </h1>
-            <h5><s class="price"> 原价101元(永久)</s></h5>
-            <button class="btn waves-effect waves-light cyan" type="submit" name="action" onclick="gopay()">去支付
-                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
             </button>
         </div>
     </div>
