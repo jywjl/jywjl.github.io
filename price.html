@@ -26,7 +26,16 @@
     </style>
     <script>
         function gopay() {
-            var username = location.href.split('?u=')
+            if (location.href.indexOf('?u=')>-1){
+                var username=location.href.split('?u=')
+                var str=''
+                if (username.length>1){
+                    str=username[1]
+                }
+                location.href='https://jywjl.github.io/topup.html?u='+str
+                return
+            }
+            var username = location.href.split('?')
             var str = ''
             if (username.length > 1) {
                 str = username[1]
