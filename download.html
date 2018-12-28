@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+        .mcard {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .mtitle {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    <a href=""></a>
+    <div style="display: flex;flex-direction: column;align-items: center;">
+        <div style="max-width: 700px;display: flex;flex-direction: column;align-items: center;width: 100%;">
+            <div class="card mcard">
+                <img src="images/icons/android.png" width="50" alt="android">
+                <span class="mtitle"><b>Android</b></span>
+                <a class="waves-effect waves-light btn mbtn" href="https://jywjl.github.io/binaries/jywjl-android_arm64_arm-lastest.apk">下载</a>
+            </div>
+            <div class="card mcard">
+                <img src="images/icons/windows.png" width="50" alt="android">
+                <span class="mtitle"><b>Windows</b></span>
+                <a class="waves-effect waves-light btn mbtn" href="https://jywjl.github.io/binaries/jywjl-windows_x86-lastest.exe">下载</a>
+            </div>
+            <div class="card mcard">
+                <img src="images/icons/linux.png" width="50" alt="android">
+                <span class="mtitle"><b>Linux</b></span>
+                <a class="waves-effect waves-light btn mbtn" href="https://jywjl.github.io/binaries/jywjl-linux_x86_64-lastest.tar.bz2">下载</a>
+            </div>
+            <div class="card mcard">
+                <img src="images/icons/darwin.png" width="50" alt="android">
+                <span class="mtitle"><b>Mac</b></span>
+                <a class="waves-effect waves-light btn mbtn" href="https://jywjl.github.io/binaries/jywjl-mac_x86_64-lastest.zip">下载</a>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
