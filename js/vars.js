@@ -1,4 +1,4 @@
-url_windows='windows'
+url_windows='http://files.git.oschina.net/group1/M00/06/1E/PaAvDFwrIa6AdfFUAQ8E17THoo8539.exe?token=0b41aef19e1f11f4d2dba32b76418df7&ts=1546331463&attname=jywjl_v1.0.0.exe'
 url_linux='http://files.git.oschina.net/group1/M00/06/1E/PaAvDFwrGeKAdvooAEsgmsPc8i0707.bz2?token=427d1a92fe1d50a65a77ed929587cb94&ts=1546328560&attname=jywjl.tar.bz2'
-url_mac='mac'
+url_mac='http://files.git.oschina.net/group1/M00/06/1E/PaAvDFwrJHKAfbXpAKi7dufDPxE634.zip?token=287cb938f390993880533d813fc74417&ts=1546331463&attname=jywjl_v1.0.0.zip'
 url_android='http://files.git.oschina.net/group1/M00/06/1E/PaAvDFwrGZuAQiHkAMJpd9ujsHw308.apk?token=1863e0d556da1dc9d542b14c08897d11&ts=1546328560&attname=jywjl_v1.0.0.apk'
