@@ -27,8 +27,8 @@
     </style>
     <script>
         function gopay() {
-            if (location.href.indexOf('?u=')>-1){
-                var username=location.href.split('?u=')
+            if (location.href.indexOf('#')>-1){
+                var username=location.href.split('#')
                 var str=''
                 if (username.length>1){
                     str=username[1]

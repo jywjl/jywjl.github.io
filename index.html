@@ -8,8 +8,9 @@
     <title>局域网精灵-线上版</title>
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/vars.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <style>
         .wordLeft{
             margin-left: 10px;
@@ -36,16 +37,16 @@
         function download() {
             switch (check_os()) {
                 case 'windows':
-                    location.href = 'http://jywjl.gitee.io/binaries/jywjl-windows_x86-latest.exe'
+                    location.href = url_windows
                     break;
                 case 'mac':
-                    location.href = 'http://jywjl.gitee.io/binaries/jywjl-mac_x86_64-latest.zip'
+                    location.href = url_mac
                     break;
                 case 'linux':
-                    location.href = 'http://jywjl.gitee.io/binaries/jywjl-linux_x86_64-latest.tar.bz2'
+                    location.href = url_linux
                     break;
                 case 'android':
-                    location.href = 'http://jywjl.gitee.io/binaries/jywjl-android_arm64_arm-latest.apk'
+                    location.href = url_android
                     break;
             }
         }
@@ -56,7 +57,7 @@
                 window.server = xhr.responseText
             }
         }
-        xhr.open("GET", "https://jywjl.gitee.io/apis/server", true)
+        xhr.open("GET", "https://jywjl.github.io/apis/server", true)
         xhr.send(null)
     </script>
 </head>
@@ -66,7 +67,7 @@
         <div class="nav-wrapper">
             <a href="#" class="brand-logo wordLeft" style="font-size: 20px;">局域网精灵</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-                <i class="fa fa-bars" aria-hidden="true"></i>
+                <span class="fa fa-bars" aria-hidden="true">菜单</span>
             </a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="price.html">价格</a></li>
@@ -83,7 +84,7 @@
         <li><a href="/download.html">下载</a></li>
         <li><a href="contact.html">联系作者</a></li>
     </ul>
-    <div style="display: flex;flex-direction: column;align-items: center;min-height: 900px;background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543577132859&di=7dc356a2be042e91b6a236989f4b7fb2&imgtype=0&src=http%3A%2F%2Fatt.bbs.duowan.com%2Fforum%2F201307%2F20%2F193524yre5zwigy8ewj2kj.jpg)">
+    <div id="app" style="display: flex;flex-direction: column;align-items: center;min-height: 900px;background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543577132859&di=7dc356a2be042e91b6a236989f4b7fb2&imgtype=0&src=http%3A%2F%2Fatt.bbs.duowan.com%2Fforum%2F201307%2F20%2F193524yre5zwigy8ewj2kj.jpg)">
         <img src="icons/logo_white.svg" alt="logo" width="100" height="100" style="margin-top: 160px;margin-bottom: 30px">
         <span style="color: white">局域网精灵 - 线上版</span>
         <div style="max-width: 500px;width: 100%;display: flex;flex-direction: row;align-items: center;padding: 10px;margin-top: 40px">
@@ -99,15 +100,24 @@
             <a class='dropdown-trigger btn-flat' style="color: white" href='#' data-target='dropdown1'>其他版本</a>
             <!-- Dropdown Structure -->
             <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="http://jywjl.gitee.io/binaries/jywjl-android_arm64_arm-latest.apk">安卓</a></li>
+                <li><a v-bind:href='url_android'>安卓</a></li>
                 <li class="divider" tabindex="-1"></li>
-                <li><a href="http://jywjl.gitee.io/binaries/jywjl-windows_x86-latest.exe">Windows</a></li>
-                <li><a href="http://jywjl.gitee.io/binaries/jywjl-mac_x86_64-latest.zip">Mac OS</a></li>
-                <li><a href="http://jywjl.gitee.io/binaries/jywjl-linux_x86_64-latest.tar.bz2">Linux 64位</a></li>
+                <li><a v-bind:href='url_windows'>Windows</a></li>
+                <li><a v-bind:href='url_mac'>Mac OS</a></li>
+                <li><a v-bind:href='url_linux'>Linux 64位</a></li>
             </ul>
         </div>
     </div>
     <script>
+        app = new Vue({
+            el: '#app',
+            data: {
+                url_windows: url_windows,
+                url_linux: url_linux,
+                url_android: url_android,
+                url_mac: url_mac,
+            }
+        })
         M.AutoInit()
         var input = document.getElementById('username')
         if (input) {

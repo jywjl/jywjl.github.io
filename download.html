@@ -8,8 +8,9 @@
     <title>下载 - 局域网精灵线上版</title>
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/vars.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <style>
         .mcard {
             display: flex;
@@ -27,30 +28,41 @@
 </head>
 
 <body>
-    <div style="display: flex;flex-direction: column;align-items: center;">
+    <div id="app" style="display: flex;flex-direction: column;align-items: center;">
         <div style="max-width: 700px;display: flex;flex-direction: column;align-items: center;width: 100%;">
             <div class="card mcard">
                 <img src="images/icons/android.png" width="50" alt="android">
                 <span class="mtitle"><b>Android</b></span>
-                <a class="waves-effect waves-light btn mbtn" href="http://jywjl.gitee.io/binaries/jywjl-android_arm64_arm-latest.apk">下载</a>
+                <a class="waves-effect waves-light btn mbtn" v-bind:href='url_android'>下载</a>
             </div>
             <div class="card mcard">
                 <img src="images/icons/windows.png" width="50" alt="android">
                 <span class="mtitle"><b>Windows</b></span>
-                <a class="waves-effect waves-light btn mbtn" href="http://jywjl.gitee.io/binaries/jywjl-windows_x86-latest.exe">下载</a>
+                <a class="waves-effect waves-light btn mbtn" v-bind:href='url_windows'>下载</a>
             </div>
             <div class="card mcard">
                 <img src="images/icons/linux.png" width="50" alt="android">
                 <span class="mtitle"><b>Linux</b></span>
-                <a class="waves-effect waves-light btn mbtn" href="http://jywjl.gitee.io/binaries/jywjl-linux_x86_64-latest.tar.bz2">下载</a>
+                <a class="waves-effect waves-light btn mbtn" v-bind:href="url_linux">下载</a>
             </div>
             <div class="card mcard">
                 <img src="images/icons/darwin.png" width="50" alt="android">
                 <span class="mtitle"><b>Mac</b></span>
-                <a class="waves-effect waves-light btn mbtn" href="http://jywjl.gitee.io/binaries/jywjl-mac_x86_64-latest.zip">下载</a>
+                <a class="waves-effect waves-light btn mbtn" v-bind:href="url_mac">下载</a>
             </div>
         </div>
     </div>
+    <script>
+        app=new Vue({
+            el:'#app',
+            data:{
+                url_windows:url_windows,
+                url_linux:url_linux,
+                url_mac:url_mac,
+                url_android:url_android
+            }
+        })
+    </script>
 </body>
 
 </html>
