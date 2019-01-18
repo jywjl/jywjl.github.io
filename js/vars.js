@@ -1,4 +1,4 @@
-url_windows='http://files.git.oschina.net/group1/M00/06/1E/PaAvDFwrIa6AdfFUAQ8E17THoo8539.exe?token=0b41aef19e1f11f4d2dba32b76418df7&ts=1546331463&attname=jywjl_v1.0.0.exe'
-url_linux='http://files.git.oschina.net/group1/M00/06/1E/PaAvDFwrGeKAdvooAEsgmsPc8i0707.bz2?token=427d1a92fe1d50a65a77ed929587cb94&ts=1546328560&attname=jywjl.tar.bz2'
-url_mac='http://files.git.oschina.net/group1/M00/06/1E/PaAvDFwrJHKAfbXpAKi7dufDPxE634.zip?token=287cb938f390993880533d813fc74417&ts=1546331463&attname=jywjl_v1.0.0.zip'
-url_android='http://files.git.oschina.net/group1/M00/06/1E/PaAvDFwrQ7aAEXbJAMJr5yC40EM213.apk?token=add5e298bae0798baaf20d4cce0feb2c&ts=1546339346&attname=jywjl_v1.0.0.apk'
+url_windows='http://files.git.oschina.net/group1/M00/06/52/PaAvDFxBME6AW44BARII3kkvMj4468.exe?token=15d183f4d905bad2522984cb5f3070fb&ts=1547777013&attname=jywjl_v2.0.0.exe'
+url_linux='http://files.git.oschina.net/group1/M00/06/51/PaAvDFxBK-KAf_QhAExNPrRCK1o231.bz2?token=6be8eecec4d19209234cc4d64a0d469f&ts=1547777013&attname=jywjl_v2.0.0.tar.bz2'
+url_mac='http://files.git.oschina.net/group1/M00/06/52/PaAvDFxBMwWAWVndAKpVZ_bdGCc192.zip?token=fd86208175605fafe3e8a9b5eca00f76&ts=1547777013&attname=jywjl_v2.0.0.zip'
+url_android='http://files.git.oschina.net/group1/M00/06/51/PaAvDFxBK_OASfHTAMTKG5DNrGM020.apk?token=6ccc9ba49da1063d686031281a0addae&ts=1547777013&attname=jywjl_v2.0.0.apk'
