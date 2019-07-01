@@ -37,16 +37,16 @@
         function download() {
             switch (check_os()) {
                 case 'windows':
-                    location.href = url_windows
+                    location.href = findLatest(version_history.windows).url
                     break;
                 case 'mac':
-                    location.href = url_mac
+                    location.href = findLatest(version_history.mac).url
                     break;
                 case 'linux':
-                    location.href = url_linux
+                    location.href = findLatest(version_history.linux).url
                     break;
                 case 'android':
-                    location.href = url_android
+                    location.href = findLatest(version_history.android).url
                     break;
             }
         }
@@ -112,10 +112,10 @@
         app = new Vue({
             el: '#app',
             data: {
-                url_windows: url_windows,
-                url_linux: url_linux,
-                url_android: url_android,
-                url_mac: url_mac,
+                url_windows: findLatest(version_history.windows).url,
+                url_linux: findLatest(version_history.linux).url,
+                url_android: findLatest(version_history.android).url,
+                url_mac: findLatest(version_history.mac).url,
             }
         })
         M.AutoInit()
