@@ -15,6 +15,12 @@ version_history={
     ],
     android:[
         {
+            version:'v2.0.1',
+            time:'2019-09-07',
+            description:'1.迁移到androidx. 2.添加Android 10支持',
+            url:'https://coding.net/s/bd8116bd-1dbf-4035-a617-4abb5fd66c7c'
+        },
+        {
             version:'v2.0.0',
             time:'--',
             description:'',
