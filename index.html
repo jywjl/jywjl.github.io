@@ -30,7 +30,7 @@
             return "linux"
         }
         function submit() {
-            var username = document.getElementById('username').value
+            var username = prompt('输入你的用户名');
             console.log(username)
             location.href = 'http://' + window.server + '/' + username
         }
@@ -72,6 +72,7 @@
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="price.html">价格</a></li>
                 <li><a href="/download.html">下载</a></li>
+                <li><a href="#" onclick="submit()">我的主页</a></li>
                 <li><a href="contact.html">联系作者</a></li>
             </ul>
         </div>
@@ -82,6 +83,7 @@
     <ul class="sidenav" id="mobile-demo">
         <li><a href="price.html">价格</a></li>
         <li><a href="/download.html">下载</a></li>
+        <li><a href="#" onclick="submit()">我的主页</a></li>
         <li><a href="contact.html">联系作者</a></li>
     </ul>
     <div id="app" style="display: flex;flex-direction: column;align-items: center;min-height: 900px;background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543577132859&di=7dc356a2be042e91b6a236989f4b7fb2&imgtype=0&src=http%3A%2F%2Fatt.bbs.duowan.com%2Fforum%2F201307%2F20%2F193524yre5zwigy8ewj2kj.jpg)">
