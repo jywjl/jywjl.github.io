@@ -10,27 +10,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <style>
-        .price{
+        .price {
             color: red
         }
-        #pay1,#pay2{
+
+        #pay1,
+        #pay2 {
             font-size: 30px;
         }
-        .mcard{
-            padding: 20px;display: flex;flex-direction: column;align-items:flex-start;
+
+        .mcard {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
             margin: 5px;
         }
-        .mcard:hover{
+
+        .mcard:hover {
             background-color: #eeeeee;
         }
     </style>
     <script>
-        function getUsername(){
-            if (location.href.indexOf('#')>-1){
-                var username=location.href.split('#')
-                var str=''
-                if (username.length>1){
-                    str=username[1]
+        function getUsername() {
+            if (location.href.indexOf('#') > -1) {
+                var username = location.href.split('#')
+                var str = ''
+                if (username.length > 1) {
+                    str = username[1]
                 }
                 return str;
             }
@@ -42,20 +49,25 @@
             return str;
         }
         function gopay() {
-            var str=getUsername();
+            var str = getUsername();
             location.href = 'https://jywjl.github.io/topup.html?u=' + str;
         }
 
-        var username=getUsername();
-        if(!username||username==''){
-
+        function checkUsername() {
+            var username = getUsername();
+            if (!username || username == '') {
+                document.getElementById('info1').style.display = '';
+                document.getElementById('info2').style.display = '';
+            }
         }
+        setTimeout('checkUsername()',100);
     </script>
 </head>
 
 <body>
     <div style="display: flex;flex-direction: column;align-items: center;">
-        <div style="margin-top: 20px;display: flex;flex-direction: column;align-items: center;max-width: 700px;width: 100%;">
+        <div
+            style="margin-top: 20px;display: flex;flex-direction: column;align-items: center;max-width: 700px;width: 100%;">
             <div style="display: flex;flex-direction: row;align-items: center;padding: 10px;">
                 <div class="card mcard">
                     <span id="pay1" class="price">1元7天</span>
@@ -65,8 +77,8 @@
                     <span><s>原价:99元永久</s></span>
                 </div>
             </div>
-            <div>请先<a href="download.html">下载客户端</a>,在里面注册之后再充值，</div>
-            <div>因为支付的时候需要备注上你的账号名</div>
+            <div id="info1" style="display: none">请先<a href="download.html">下载客户端</a>,在里面注册之后再充值，</div>
+            <div id="info2" style="display: none">因为支付的时候需要备注上你的账号名</div>
             <button class="btn waves-effect waves-light cyan" type="submit" name="action" onclick="gopay()">去支付
             </button>
         </div>
