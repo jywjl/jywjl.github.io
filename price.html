@@ -25,22 +25,30 @@
         }
     </style>
     <script>
-        function gopay() {
+        function getUsername(){
             if (location.href.indexOf('#')>-1){
                 var username=location.href.split('#')
                 var str=''
                 if (username.length>1){
                     str=username[1]
                 }
-                location.href='https://jywjl.github.io/topup.html?u='+str
-                return
+                return str;
             }
             var username = location.href.split('?')
             var str = ''
             if (username.length > 1) {
                 str = username[1]
             }
-            location.href = 'https://jywjl.github.io/topup.html?u=' + str
+            return str;
+        }
+        function gopay() {
+            var str=getUsername();
+            location.href = 'https://jywjl.github.io/topup.html?u=' + str;
+        }
+
+        var username=getUsername();
+        if(!username||username==''){
+
         }
     </script>
 </head>
@@ -57,6 +65,8 @@
                     <span><s>原价:99元永久</s></span>
                 </div>
             </div>
+            <div>请先<a href="download.html">下载客户端</a>,在里面注册之后再充值，</div>
+            <div>因为支付的时候需要备注上你的账号名</div>
             <button class="btn waves-effect waves-light cyan" type="submit" name="action" onclick="gopay()">去支付
             </button>
         </div>
