@@ -15,6 +15,12 @@ version_history={
     ],
     android:[
         {
+            version:'v2.0.2',
+            time:'2019-09-22',
+            description:'1.修复会员剩余时间显示',
+            url:'https://coding.net/s/aceffc00-2705-4e2d-b3e3-4196dae6fbed'
+        },
+        {
             version:'v2.0.1',
             time:'2019-09-07',
             description:'1.迁移到androidx. 2.添加Android 10支持',
