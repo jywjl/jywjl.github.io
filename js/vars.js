@@ -15,6 +15,12 @@ version_history={
     ],
     android:[
         {
+            version:'v2.0.3',
+            time:'2019-10-03',
+            description:'1.新增IPv6地址支持;2.使用Go标准HTTP库;3.去掉127.0.0.1地址显示',
+            url:'http://jywjl.gitee.io/binaries/jywjl_v2.0.3.apk'
+        },
+        {
             version:'v2.0.2',
             time:'2019-09-22',
             description:'1.修复会员剩余时间显示',
