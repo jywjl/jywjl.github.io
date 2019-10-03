@@ -12,7 +12,7 @@
     <script src="js/vars.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <style>
-        .wordLeft{
+        .wordLeft {
             margin-left: 10px;
         }
     </style>
@@ -86,12 +86,17 @@
         <li><a href="#" onclick="submit()">我的主页</a></li>
         <li><a href="contact.html">联系作者</a></li>
     </ul>
-    <div id="app" style="display: flex;flex-direction: column;align-items: center;min-height: 900px;background-image: url(images/site_background.jpg)">
+    <div id="app"
+        style="display: flex;flex-direction: column;align-items: center;min-height: 900px;background-image: url(images/site_background.jpg)">
         <h4 style="color: white">局域网精灵 - 专业版</h4>
         <h5 style="color: white">功能强劲！ <a href="price.html">立即购买</a> </h5>
-        <img src="images/cover_desktop.png" alt="logo" style="max-width: 400px;width: 80%;margin-top: 10px;">
+        <div style="display:flex;flex-direction: row; max-width: 600px;width: 80%;align-items: center">
+            <img style="width: 40%; margin: 10px" src="images/android_screenshot.jpg">
+            <img style="width: 60%; margin: 10px" src="images/desktop_screenshot.png">
+        </div>
         <div style="margin-top: 10px;">
-            <button class="btn waves-effect waves-light" type="button" name="download" id="download" onclick="download()">立即下载
+            <button class="btn waves-effect waves-light" type="button" name="download" id="download"
+                onclick="download()">立即下载
             </button>
             <a class='dropdown-trigger btn-flat' style="color: white" href='#' data-target='dropdown1'>其他版本</a>
             <!-- Dropdown Structure -->
