@@ -1,4 +1,5 @@
-urls={
+window.server = '120.77.202.220'
+urls = {
     android: 'https://github.com/jywjl/jywjl.github.io/releases/download/android/jywjl_android_v3.0.0.apk',
     windows: 'https://github.com/jywjl/jywjl.github.io/releases/download/windows/jywjl_windows_v2.0.0.exe',
     linux: 'https://github.com/jywjl/jywjl.github.io/releases/download/linux/jywjl_linux_amd64_v2.0.0.tar.bz2',
