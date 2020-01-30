@@ -31,7 +31,7 @@
         function submit() {
             var username = prompt('输入你的用户名');
             console.log(username)
-            if(username){
+            if (username) {
                 location.href = 'http://' + window.server + '/' + username
             }
         }
@@ -90,8 +90,12 @@
     <div id="app"
         style="display: flex;flex-direction: column;align-items: center;min-height: 900px;background-image: url(images/site_background.jpeg)">
         <h4 style="color: white">局域网精灵 - 专业版</h4>
-        <h5 style="color: white">功能强劲！ <a href="price.html">立即购买</a> </h5>
-        <div style="display:flex;flex-direction: row; max-width: 600px;width: 80%;align-items: center;justify-content: space-around">
+        <a href="/download.html" style="color: white;">安卓端v3.0.0发布，界面大更新，使用Kotlin</a>
+        <h5 style="color: white">功能强劲！ <a class="btn waves-effect waves-light" href="price.html">
+                立即购买
+            </a> </h5>
+        <div
+            style="display:flex;flex-direction: row; max-width: 600px;width: 80%;align-items: center;justify-content: space-around">
             <img style="width: 40%; margin: 10px" src="images/android_screenshot.jpg">
             <img style="width: 60%; margin: 10px" src="images/desktop_screenshot.png">
         </div>
