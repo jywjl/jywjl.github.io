@@ -34,22 +34,22 @@
             <div class="card mcard">
                 <img src="images/icons/android.png" width="50" alt="android">
                 <span class="mtitle"><b>Android</b></span>
-                <a class="waves-effect waves-light btn mbtn" v-bind:href='android.url'>下载</a>
+                <a class="waves-effect waves-light btn mbtn" v-bind:href='android'>下载</a>
             </div>
             <div class="card mcard">
                 <img src="images/icons/windows.png" width="50" alt="android">
                 <span class="mtitle"><b>Windows</b></span>
-                <a class="waves-effect waves-light btn mbtn" v-bind:href='windows.url'>下载</a>
+                <a class="waves-effect waves-light btn mbtn" v-bind:href='windows'>下载</a>
             </div>
             <div class="card mcard">
                 <img src="images/icons/linux.png" width="50" alt="android">
                 <span class="mtitle"><b>Linux</b></span>
-                <a class="waves-effect waves-light btn mbtn" v-bind:href="linux.url">下载</a>
+                <a class="waves-effect waves-light btn mbtn" v-bind:href="linux">下载</a>
             </div>
             <div class="card mcard">
                 <img src="images/icons/darwin.png" width="50" alt="android">
                 <span class="mtitle"><b>Mac</b></span>
-                <a class="waves-effect waves-light btn mbtn" v-bind:href="mac.url">下载</a>
+                <a class="waves-effect waves-light btn mbtn" v-bind:href="mac">下载</a>
             </div>
         </div>
     </div>
@@ -57,10 +57,10 @@
         app=new Vue({
             el:'#app',
             data:{
-                windows:findLatest(version_history.windows),
-                linux:findLatest(version_history.linux),
-                mac:findLatest(version_history.mac),
-                android:findLatest(version_history.android)
+                windows:urls.windows,
+                linux:urls.linux,
+                mac:urls.mac,
+                android:urls.android
             }
         })
     </script>
