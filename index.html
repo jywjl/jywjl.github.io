@@ -38,16 +38,16 @@
         function download() {
             switch (check_os()) {
                 case 'windows':
-                    location.href = windowsDownloadUrl
+                    location.href = app.url_windows
                     break;
                 case 'mac':
-                    location.href = macDownloadUrl
+                    location.href = app.url_mac
                     break;
                 case 'linux':
-                    location.href = linuxDownloadUrl
+                    location.href = app.url_linux
                     break;
                 case 'android':
-                    location.href = androidDownloadUrl
+                    location.href = app.url_android
                     break;
             }
         }
@@ -118,10 +118,10 @@
         app = new Vue({
             el: '#app',
             data: {
-                url_windows: windowsDownloadUrl,
-                url_linux: linuxDownloadUrl,
-                url_android: androidDownloadUrl,
-                url_mac: macDownloadUrl,
+                url_android: 'https://github.com/jywjl/jywjl.github.io/releases/download/android/jywjl_android_v3.0.0.apk',
+                url_windows: 'https://github.com/jywjl/jywjl.github.io/releases/download/windows/jywjl_windows_v2.0.0.exe',
+                url_linux: 'https://github.com/jywjl/jywjl.github.io/releases/download/linux/jywjl_linux_amd64_v2.0.0.tar.bz2',
+                url_mac: 'https://github.com/jywjl/jywjl.github.io/releases/download/mac/jywjl_mac_v2.0.0.zip',
             }
         })
         M.AutoInit()
