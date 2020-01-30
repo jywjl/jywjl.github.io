@@ -1,3 +1,8 @@
+androidDownloadUrl='https://github.com/jywjl/jywjl.github.io/releases/download/android/jywjl_android_v3.0.0.apk'
+windowsDownloadUrl='https://github.com/jywjl/jywjl.github.io/releases/download/windows/jywjl_windows_v2.0.0.exe'
+linuxDownloadUrl='https://github.com/jywjl/jywjl.github.io/releases/download/linux/jywjl_linux_amd64_v2.0.0.tar.bz2'
+macDownloadUrl='https://github.com/jywjl/jywjl.github.io/releases/download/mac/jywjl_mac_v2.0.0.zip'
+
 version_history = {
     windows: [
         {
