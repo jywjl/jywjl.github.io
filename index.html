@@ -1,124 +1,16 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<head xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>局域网精灵-专业版</title>
-    <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/vars.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <style>
-        .wordLeft {
-            margin-left: 10px;
-        }
-    </style>
-    <script type="text/javascript">
-        function check_os() {
-            if (navigator.userAgent.indexOf("Windows") != -1) {
-                return "windows"
-            }
-            if (navigator.userAgent.indexOf("Android") != -1) {
-                return "android"
-            }
-            if (navigator.userAgent.indexOf('Macintosh') != -1) {
-                return "mac"
-            }
-            return "linux"
-        }
-        function submit() {
-            var username = prompt('输入你的用户名');
-            console.log(username)
-            if (username) {
-                location.href = 'http://' + window.server + '/api-v3/jywjl/web/' + username
-            }
-        }
-        function download() {
-            switch (check_os()) {
-                case 'windows':
-                    location.href = app.url_windows
-                    break;
-                case 'mac':
-                    location.href = app.url_mac
-                    break;
-                case 'linux':
-                    location.href = app.url_linux
-                    break;
-                case 'android':
-                    location.href = app.url_android
-                    break;
-            }
-        }
-    </script>
+    <title>局域网精灵</title>
 </head>
 
 <body>
-    <nav class="nav-extended cyan">
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo wordLeft" style="font-size: 20px;">局域网精灵专业版</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-                <span class="fa fa-bars" aria-hidden="true">菜单</span>
-            </a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="price.html">价格</a></li>
-                <li><a href="/download.html">下载</a></li>
-                <li><a href="javascript:;" onclick="submit()">云剪切板</a></li>
-                <li><a href="contact.html">联系作者</a></li>
-            </ul>
-        </div>
-        <div class="nav-content">
-        </div>
-    </nav>
-
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="price.html">价格</a></li>
-        <li><a href="/download.html">下载</a></li>
-        <li><a href="#" onclick="submit()">云剪切板</a></li>
-        <li><a href="contact.html">联系作者</a></li>
-    </ul>
-    <div id="app"
-        style="display: flex;flex-direction: column;align-items: center;min-height: 900px;background-image: url(http://jywjl.gitee.io/res/image/site_background.jpeg)">
-        <h4 style="color: white">局域网精灵 - 专业版</h4>
-        <a href="/download.html" style="color: white;">安卓端v3.1.2发布，UI界面大更新!</a>
-        <h5 style="color: white">功能强劲！ <a class="btn waves-effect waves-light" href="price.html">
-                立即购买
-            </a> </h5>
-        <div
-            style="display:flex;flex-direction: row; max-width: 600px;width: 80%;align-items: center;justify-content: space-around">
-            <img style="width: 40%; margin: 10px" src="http://jywjl.gitee.io/res/image/android_screenshot.jpg">
-            <img style="width: 60%; margin: 10px" src="http://jywjl.gitee.io/res/image/desktop_screenshot.png">
-        </div>
-        <div style="margin-top: 10px;">
-            <button class="btn waves-effect waves-light" type="button" name="download" id="download"
-                onclick="download()">立即下载
-            </button>
-            <a class='dropdown-trigger btn-flat' style="color: white" href='#' data-target='dropdown1'>其他版本</a>
-            <!-- Dropdown Structure -->
-            <ul id='dropdown1' class='dropdown-content'>
-                <li><a v-bind:href='url_android'>安卓</a></li>
-                <li class="divider" tabindex="-1"></li>
-                <li><a v-bind:href='url_windows'>Windows</a></li>
-                <li><a v-bind:href='url_mac'>Mac OS</a></li>
-                <li><a v-bind:href='url_linux'>Linux 64位</a></li>
-            </ul>
-        </div>
-    </div>
+    <h1>跳转到新的<a href="https://jywjl.gitee.io">官网</a>...</h1>
     <script>
-        app = new Vue({
-            el: '#app',
-            data: {
-                url_android: urls.android,
-                url_windows: urls.windows,
-                url_linux: urls.linux,
-                url_mac: urls.mac
-            }
-        })
-        M.AutoInit()
-        if (location.href.endsWith("#my-home-page")) {
-            submit()
-        }
+        location.href = location.href.replace('github.io', 'gitee.io')
     </script>
 </body>
 
