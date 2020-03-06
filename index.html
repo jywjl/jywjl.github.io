@@ -29,11 +29,7 @@
             return "linux"
         }
         function submit() {
-            var username = prompt('输入你的用户名');
-            console.log(username)
-            if (username) {
-                location.href = 'http://' + window.server + '/api-v3/jywjl/web/' + username
-            }
+            location.href = 'http://' + window.server + '/api-v3/jywjl/web'
         }
         function download() {
             switch (check_os()) {
