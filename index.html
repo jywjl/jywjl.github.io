@@ -26,6 +26,9 @@
             if (navigator.userAgent.indexOf('Macintosh') != -1) {
                 return "mac"
             }
+            if (navigator.userAgent.indexOf('iPhone') != -1) {
+                return "ios"
+            }
             return "linux"
         }
         function submit() {
@@ -44,6 +47,9 @@
                     break;
                 case 'android':
                     location.href = app.url_android
+                    break;
+                case 'ios':
+                    location.href = app.url_ios
                     break;
             }
         }
@@ -77,7 +83,7 @@
     <div id="app"
         style="display: flex;flex-direction: column;align-items: center;min-height: 900px;background-image: url(/res/image/site_background.jpeg)">
         <h4 style="color: white">局域网精灵 - 专业版</h4>
-        <!-- <a href="/download.html" style="color: white;">五一七折特价！</a> -->
+        <a href="/download.html" style="color: white;">狂欢五月，全部五折！🎉庆祝iOS版上架</a>
         <h5 style="color: white">功能强劲！ <a class="btn waves-effect waves-light" href="price.html">
                 立即购买
             </a> </h5>
@@ -98,6 +104,8 @@
                 <li><a v-bind:href='url_windows'>Windows</a></li>
                 <li><a v-bind:href='url_mac'>Mac OS</a></li>
                 <li><a v-bind:href='url_linux'>Linux 64位</a></li>
+                <li><a v-bind:href="url_ios">iOS</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -108,7 +116,8 @@
                 url_android: urls.android,
                 url_windows: urls.windows,
                 url_linux: urls.linux,
-                url_mac: urls.mac
+                url_mac: urls.mac,
+                url_ios: urls.ios
             }
         })
         M.AutoInit()
