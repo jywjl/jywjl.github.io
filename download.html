@@ -52,6 +52,11 @@
                 <span class="mtitle"><b>Mac</b></span>
                 <a class="waves-effect waves-light btn mbtn" v-bind:href="mac">下载</a>
             </div>
+            <div class="card mcard">
+                <img src="/res/image/darwin.png" width="50" alt="android">
+                <span class="mtitle"><b>iOS</b></span>
+                <a class="waves-effect waves-light btn mbtn" v-bind:href="ios">下载</a>
+            </div>
         </div>
     </div>
     <script>
@@ -61,7 +66,8 @@
                 windows: urls.windows,
                 linux: urls.linux,
                 mac: urls.mac,
-                android: urls.android
+                android: urls.android,
+                ios: urls.ios
             }
         })
     </script>
