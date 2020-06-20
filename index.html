@@ -24,7 +24,7 @@
                 return "android"
             }
             if (navigator.userAgent.indexOf('Macintosh') != -1) {
-                return "mac"
+                return "darwin"
             }
             if (navigator.userAgent.indexOf('iPhone') != -1) {
                 return "ios"
@@ -39,8 +39,8 @@
                 case 'windows':
                     location.href = app.url_windows
                     break;
-                case 'mac':
-                    location.href = app.url_mac
+                case 'darwin':
+                    location.href = app.url_darwin
                     break;
                 case 'linux':
                     location.href = app.url_linux
@@ -102,7 +102,7 @@
                 <li><a v-bind:href='url_android'>安卓</a></li>
                 <li class="divider" tabindex="-1"></li>
                 <li><a v-bind:href='url_windows'>Windows</a></li>
-                <li><a v-bind:href='url_mac'>Mac OS</a></li>
+                <li><a v-bind:href='url_darwin'>Mac OS</a></li>
                 <li><a v-bind:href='url_linux'>Linux 64位</a></li>
                 <li><a v-bind:href="url_ios">iOS</a>
                 </li>
@@ -116,7 +116,7 @@
                 url_android: urls.android,
                 url_windows: urls.windows,
                 url_linux: urls.linux,
-                url_mac: urls.mac,
+                url_darwin: urls.darwin,
                 url_ios: urls.ios
             }
         })
