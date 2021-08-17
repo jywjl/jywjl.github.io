@@ -1,6 +1,6 @@
 window.server = '120.77.202.220'
 urls = {
-    android: 'https://wwi.lanzoux.com/iSEPNlbk0ah',
+    android: 'https://wwi.lanzoui.com/ioZVdse16dc',
     windows: 'https://ww.lanzoux.com/ico7lhg',
     linux: 'https://wwe.lanzoux.com/iwEVpey3qcj',
     darwin: 'https://ww.lanzoux.com/ico7l4d',
