@@ -7,8 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>价格 - 局域网精灵</title>
     <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <style>
         .price {
             color: red
@@ -39,34 +37,27 @@
                 if (username.length > 1) {
                     str = username[1]
                 }
-                return str;
+                return encodeURIComponent(str);
             }
             var username = location.href.split('?')
             var str = ''
             if (username.length > 1) {
                 str = username[1]
             }
-            return str;
+            return encodeURIComponent(str);
         }
         function gopay() {
             var str = getUsername();
             location.href = '/topup.html?u=' + str;
         }
 
-        function checkUsername() {
-            var username = getUsername();
-            if (!username || username == '') {
-                document.getElementById('info1').style.display = '';
-                document.getElementById('info2').style.display = '';
-            }
-        }
-        setTimeout('checkUsername()', 100);
     </script>
 </head>
 
 <body>
     <div style="display: flex;flex-direction: column;align-items: center;">
-        <div
+        正在跳转到新地址 <a href="javascript:location.href='https://www.lan-genius.com/price.html?username='+getUsername();">立即跳转</a>
+        <!-- <div
             style="margin-top: 20px;display: flex;flex-direction: column;align-items: center;max-width: 700px;width: 100%;">
             <div id="info1" style="display: none">请先注册一个账号再充值，<a href="download.html">立即下载客户端</a></div>
             <div style="display: flex;flex-direction: row;align-items: center;padding: 10px;">
@@ -87,11 +78,12 @@
             <div id="info2" style="display: none">因为支付的时候需要备注上你的账号名</div>
             <button class="btn waves-effect waves-light cyan" type="submit" name="action" onclick="gopay()">去支付
             </button>
-        </div>
+        </div> -->
     </div>
     <script>
-        M.AutoInit()
-        setTimeout("document.getElementById('pay1').classList.add('scale-in')", 500)
+        setTimeout(() => {
+            location.href='https://www.lan-genius.com/price.html?username='+getUsername()
+        }, 1000);
     </script>
 </body>
 

@@ -15,11 +15,25 @@
             padding: 30px;
         }
     </style>
+
+    <script>
+        function getUsername() {
+            var username = location.href.split('u=')
+            if (username.length > 1) {
+                return decodeURIComponent(username[1])
+            }
+            return ''
+        }
+
+    </script>
 </head>
 
 <body>
     <div id="ctn">
-        <h1 style="display: inline;">请务必备注上你的用户名:<span style="color: red" id="username"></span></h1>
+
+        正在跳转到新地址 <a
+            href="javascript:location.href='https://www.lan-genius.com/price.html?username='+getUsername();">立即跳转</a>
+        <!-- <h1 style="display: inline;">请务必备注上你的用户名:<span style="color: red" id="username"></span></h1>
         <span>充值将在一个工作日内完成</span>
         <span>售后QQ群:691017244</span>
         <a href="https://qr.alipay.com/tsx02907mtbanqhpid1vq87"><img src="res/image/alipay.jpg" alt="alipay"></a>
@@ -29,13 +43,12 @@
         <a href="https://www.paypal.me/stevenzack"><b>境外支付请使用Paypal（记得留言上用户名）</b>
         </a>
        <a href="https://www.paypal.me/stevenzack">
-        <img src="res/image/paypal.jpg" alt="paypal"></a>
+        <img src="res/image/paypal.jpg" alt="paypal"></a> -->
     </div>
     <script>
-        var username = location.href.split('u=')
-        if (username.length > 1) {
-            document.getElementById("username").innerHTML = decodeURIComponent(username[1])
-        }
+        setTimeout(() => {
+            location.href = 'https://www.lan-genius.com/price.html?username=' + getUsername()
+        }, 1000);
     </script>
 </body>
 
